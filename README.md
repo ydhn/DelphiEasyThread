@@ -23,7 +23,7 @@ Implement your "to do" works in this function.
     Result := idhttp1.Get('http://google.com');
   end,
 ```
-Implement what will you do when that works are finished in this procedure
+Implement what will you do when that works are finished in this procedure.
 ```pascal
   procedure(AResult: String) begin
     Button1.Enabled := true;
@@ -39,4 +39,4 @@ false);
 ```
 
 ## Example
-This repository is a example implementation using AnonThread, making an Indy HTTP component to get http transaction.
+This repository is an example implementation using AnonThread, making an Indy HTTP component to get http transaction.
