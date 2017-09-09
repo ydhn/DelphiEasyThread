@@ -13,27 +13,59 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Button1: TButton
-    Left = 16
-    Top = 16
-    Width = 75
-    Height = 25
-    Caption = '&Fetch'
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 536
+    Height = 30
+    Align = alTop
     TabOrder = 0
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 530
+    object Button1: TButton
+      Left = 1
+      Top = 1
+      Width = 75
+      Height = 28
+      Align = alLeft
+      Caption = '&Fetch'
+      TabOrder = 0
+      OnClick = Button1Click
+      ExplicitLeft = 0
+      ExplicitTop = -1
+    end
   end
-  object ProgressBar1: TProgressBar
-    Left = 97
-    Top = 16
-    Width = 150
-    Height = 25
+  object Memo1: TMemo
+    Left = 0
+    Top = 30
+    Width = 536
+    Height = 194
+    Align = alClient
+    Lines.Strings = (
+      'Memo1')
     TabOrder = 1
+    ExplicitLeft = 192
+    ExplicitTop = 160
+    ExplicitWidth = 185
+    ExplicitHeight = 89
   end
-  object ListBox1: TListBox
-    Left = 16
-    Top = 47
-    Width = 231
-    Height = 162
-    ItemHeight = 13
-    TabOrder = 2
+  object IdHTTP1: TIdHTTP
+    AllowCookies = True
+    HandleRedirects = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 448
+    Top = 8
   end
 end
